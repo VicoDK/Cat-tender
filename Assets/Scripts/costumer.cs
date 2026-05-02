@@ -74,6 +74,7 @@ public class costumer : MonoBehaviour
 
     public void ServedDrink()
     {
+        GameObject.Find("costumerManager").GetComponent<costumerManager>().SpawnCostumer();
         Served = true;
     }
 

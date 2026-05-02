@@ -18,7 +18,7 @@ public class GrabObjectScript : MonoBehaviour
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
-        if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
             Ray ray = Camera.main.ScreenPointToRay(mousePos);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
@@ -29,7 +29,7 @@ public class GrabObjectScript : MonoBehaviour
                 
             }
         }
-        else
+        else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
             GettingDragged = false;
         }

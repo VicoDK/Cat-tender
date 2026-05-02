@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2771178917573990224}
   - component: {fileID: 4357502014956738090}
   - component: {fileID: 2551659136069830171}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703ffd5733fb1f840a4da97791e98bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  GettingDragged: 0
 --- !u!50 &4357502014956738090
 Rigidbody2D:
   serializedVersion: 5

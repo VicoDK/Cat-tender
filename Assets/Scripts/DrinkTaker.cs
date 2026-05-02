@@ -11,6 +11,8 @@ public class DrinkTaker : MonoBehaviour
     public costumer costumer;
     public string PromptString;
     public TMP_Text promtText;
+    public GameObject MistakePromt;
+    public TMP_Text MistakePromtText;
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Drink"))
@@ -49,13 +51,30 @@ public class DrinkTaker : MonoBehaviour
 
             if (Drink.GetComponent<GlassManager>().FillProcent < 100)
             {
-                Debug.Log("Not Filled");
+                MistakePromt.SetActive(true);
+                MistakePromtText.text = "The drink is not full!";
                 return;
             }
 
             if (Drink.GetComponent<GlassManager>().CockTailName != criteia.CockTailName)
             {
-                Debug.Log("Wrong Cocktail");
+                MistakePromt.SetActive(true);
+                MistakePromtText.text = "Wrong cocktail!";
+                return;
+            }
+
+            if (Drink.GetComponent<GlassManager>().Umbrella != criteia.Umbrella)
+            {
+                MistakePromt.SetActive(true);
+                if (criteia.Umbrella)
+                {
+                    MistakePromtText.text = "You forgot the umbrella!";
+                }
+                else
+                {
+                    MistakePromtText.text = "I didnt want an umbrella!";
+                }
+
                 return;
             }
 
@@ -71,9 +90,9 @@ public class DrinkTaker : MonoBehaviour
 
 
 
-
+            MistakePromt.SetActive(false);
             Destroy(Drink);
-            costumer.Served = true;
+            costumer.ServedDrink();
             
         }
     }

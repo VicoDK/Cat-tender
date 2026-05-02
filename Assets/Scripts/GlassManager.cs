@@ -16,14 +16,17 @@ public class GlassManager : MonoBehaviour
     public ingredientsListEffects[] ingredientsEffects;
 
     public string CockTailName;
+    public bool Umbrella;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+
+         
         if (collision.gameObject.tag == "ingredient")
         {
             ingredients ing = collision.gameObject.GetComponent<ingredients>();
             ingredientsInGlass.Add(ing.ingredientName);
-            ing.DoInGlassEffect();
+            ing.DoInGlassEffect(this);
             AddedToGlass();
              
         }

@@ -8,11 +8,13 @@ TagManager:
   - Fluid
   - Straw
   - Drink
+  - Umbrella
+  - PourZone
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ingredient
   - Water
   - UI
   - 

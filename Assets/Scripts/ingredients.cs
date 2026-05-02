@@ -11,12 +11,20 @@ public class ingredients : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void DoInGlassEffect()
+    public void DoInGlassEffect(GlassManager GlassManager)
     {
+
+        if (ingredientName == "Umbrella")
+        {
+            GlassManager.Umbrella = true;
+        }
+
         if (DestroyOnGlass)
         {
             Destroy(gameObject);
             
         }
+
+        
     }
 }
