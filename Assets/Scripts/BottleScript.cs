@@ -44,7 +44,7 @@ public class BottleScript : GrabObjectScript
     {
         float y = -16*(transform.localPosition.x*20)+180;
 
-        if (PourZone && Mouse.current.leftButton.isPressed && !IgnorePourZone)
+        if (PourZone && Mouse.current.leftButton.isPressed && !IgnorePourZone && -0.5f < transform.localPosition.x && transform.localPosition.x < 0.5f)
         {
             transform.rotation = Quaternion.Euler(0, 0, y);
         }

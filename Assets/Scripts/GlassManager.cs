@@ -15,6 +15,8 @@ public class GlassManager : MonoBehaviour
 
     public ingredientsListEffects[] ingredientsEffects;
 
+    public string CockTailName;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "ingredient")
@@ -26,14 +28,32 @@ public class GlassManager : MonoBehaviour
              
         }
 
-        if (collision.gameObject.tag == "Fluid")
-        {
-            Debug.Log("Added Fluid");
-             
-        }
+
 
         
         
+    }
+
+    public float FillProcent = 0;
+    public GameObject fluid;
+    public GameObject Fluidmass;
+    public void FillCup()
+    {
+        if (FillProcent < 100)
+        {
+            FillProcent += 0.5f;
+            
+        }
+        fluid.transform.localPosition = new Vector3(0, -3f + FillProcent * 0.05f, transform.position.z);
+        Fluidmass.transform.localScale = new Vector3(2.208103f, FillProcent * 0.031f, 1);
+        Fluidmass.transform.localPosition = new Vector3(0, (- FillProcent * 0.05f)/3, transform.position.z);
+
+    }
+
+    void Start()
+    {
+        fluid.transform.localPosition = new Vector3(0, -3f + FillProcent * 0.05f, transform.position.z);
+        Fluidmass.transform.localScale = new Vector3(2.208103f, FillProcent * 0.01f, 1);
     }
 
     public void AddedToGlass()

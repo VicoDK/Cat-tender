@@ -9,12 +9,14 @@ public class costumer : MonoBehaviour
 
     [HideInInspector] public Transform target;
      public float moveSpeed = 2f;
-    bool Served;
+    [HideInInspector]public bool Served;
+    public GameObject prompt;
 
 
 
     //sinus ting
     public float a;
+    public float b;
 
     
 
@@ -28,7 +30,7 @@ public class costumer : MonoBehaviour
 
         if (transform.position.x <= target.position.x)
         {
-            float y = a*math.sin(transform.position.x + 1);
+            float y = a*math.sin(b*transform.position.x + 1);
             transform.position += new Vector3(moveSpeed * Time.deltaTime, y , 0);
 
         }
@@ -36,6 +38,8 @@ public class costumer : MonoBehaviour
         if (transform.position.x >= target.position.x)
         {
             barManager.CustomerReady = true;
+            prompt.SetActive(true);
+
         }
 
 
@@ -43,6 +47,7 @@ public class costumer : MonoBehaviour
 
         if (Served)
         {
+            prompt.SetActive(false);
             if (target != exitPoint)
             {
                 OrderComplete(exitPoint);
