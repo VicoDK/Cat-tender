@@ -367,7 +367,7 @@ MonoBehaviour:
     Umbrella: 0
     Prompt: 
   Drink: {fileID: 0}
-  costumer: {fileID: 0}
+  costumer: {fileID: 9063973326303462614}
   PromptString: 
   promtText: {fileID: 8433365415522213910}
   MistakePromt: {fileID: 8432675499843550399}

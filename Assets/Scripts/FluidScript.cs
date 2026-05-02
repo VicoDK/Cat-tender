@@ -16,7 +16,7 @@ public class FluidScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Glass" && collision.gameObject.GetComponent<GlassManager>().FillProcent < 100)
+        if (collision.gameObject.tag == "Drink" && collision.gameObject.GetComponent<GlassManager>().FillProcent < 100)
         {
             collision.gameObject.GetComponent<GlassManager>().FillCup();
             Destroy(gameObject);

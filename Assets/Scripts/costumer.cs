@@ -75,6 +75,7 @@ public class costumer : MonoBehaviour
     public void ServedDrink()
     {
         GameObject.Find("costumerManager").GetComponent<costumerManager>().SpawnCostumer();
+        GameObject.Find("ScoreSystem").GetComponent<ScoreSystem>().AddToScore();
         Served = true;
     }
 

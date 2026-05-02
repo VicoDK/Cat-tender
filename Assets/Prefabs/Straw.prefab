@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6867509409036060799}
   m_Layer: 3
   m_Name: Straw
-  m_TagString: Straw
+  m_TagString: ingredient
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +31,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.2314, y: 2.7307, z: 0}
-  m_LocalScale: {x: 0.712785, y: 7.7200947, z: 2.05}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 1.6246332, z: 0.43140638}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

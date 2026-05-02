@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3368078838131514231}
   m_Layer: 0
   m_Name: PourZone
-  m_TagString: Untagged
+  m_TagString: PourZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -230,9 +230,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -810539099
-  m_SortingLayer: 2
-  m_SortingOrder: 3
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4309663643969055560, guid: 95d4923690249e04da6368364bf7890f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -321,9 +321,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -810539099
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6901961, g: 0, b: 0.9960785, a: 1}
@@ -515,9 +515,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -101345845
-  m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2990443057539896228, guid: e7bbba469bd6b1f499ff60d91b3d5102, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -731,8 +731,10 @@ MonoBehaviour:
     effect: {fileID: 5223128360977940029}
   - ingredientName: Umbrella
     effect: {fileID: 2274981863628040917}
-  CockTailName: 
+  CockTailName: Meowjito
   Umbrella: 0
+  GlassPrefab: {fileID: 2851152624229933329}
+  SpawnPoint: {x: 0, y: 0, z: 0}
   FillProcent: 0
   fluid: {fileID: 1605000059634651374}
   Fluidmass: {fileID: 1900602895574770394}
@@ -790,7 +792,7 @@ GameObject:
   - component: {fileID: 6878946492834467388}
   m_Layer: 0
   m_Name: IgnorePourZone
-  m_TagString: Untagged
+  m_TagString: PourZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -885,7 +887,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

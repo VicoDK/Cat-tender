@@ -54,6 +54,9 @@ public class ItemExtracterScript : MonoBehaviour
 
     public virtual void follow(float mousex, float mousey)
     {
-        item.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousex, mousey, 10f));
+        if (item != null)
+        {
+            item.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mousex, mousey, 10f));
+        }
     }
 }

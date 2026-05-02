@@ -91,6 +91,7 @@ public class DrinkTaker : MonoBehaviour
 
 
             MistakePromt.SetActive(false);
+            Instantiate(Drink.GetComponent<GlassManager>().GlassPrefab, Drink.GetComponent<GlassManager>().SpawnPoint, Quaternion.identity);
             Destroy(Drink);
             costumer.ServedDrink();
             

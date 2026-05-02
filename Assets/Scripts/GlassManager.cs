@@ -18,6 +18,10 @@ public class GlassManager : MonoBehaviour
     public string CockTailName;
     public bool Umbrella;
 
+
+    public GameObject GlassPrefab;
+     public Vector3 SpawnPoint;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -54,9 +58,26 @@ public class GlassManager : MonoBehaviour
     }
 
     void Start()
-    {
+    {   
+        FillProcent = 0;
+        Umbrella = false;
+        RemoveAll();
+        
         fluid.transform.localPosition = new Vector3(0, -3f + FillProcent * 0.05f, transform.position.z);
         Fluidmass.transform.localScale = new Vector3(2.208103f, FillProcent * 0.01f, 1);
+        SpawnPoint = transform.position;
+    }
+
+    private void RemoveAll()
+    {
+        // Deactivate all ingredient effects
+        for (int i = 0; i < ingredientsEffects.Length; i++)
+        {
+            ingredientsEffects[i].effect.SetActive(false);
+        }
+        
+        // Clear the ingredients list
+        ingredientsInGlass.Clear();
     }
 
     public void AddedToGlass()
@@ -73,4 +94,6 @@ public class GlassManager : MonoBehaviour
         }
         
     }
+
+
 }
