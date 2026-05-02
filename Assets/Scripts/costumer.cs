@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class costumer : MonoBehaviour
@@ -5,19 +6,34 @@ public class costumer : MonoBehaviour
     [HideInInspector] public Transform barCenter;
     [HideInInspector] public Transform exitPoint;
     [HideInInspector] public BarManager barManager;
-    public float moveSpeed = 2f;
-    public bool Served;
-    public bool testbool = false;
+
+    [HideInInspector] public Transform target;
+     public float moveSpeed = 2f;
+    bool Served;
+
+
+
+    //sinus ting
+    public float a;
+
     
 
     void FixedUpdate()
     {
-        if (barCenter != null && !Served && Vector3.Distance(transform.position, barCenter.position) > 0.1f)
+        if (target == null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, barCenter.position, moveSpeed * Time.deltaTime);
+            target = barCenter;
         }
 
-        if (Vector3.Distance(transform.position, barCenter.position) < 0.1f)
+
+        if (transform.position.x <= target.position.x)
+        {
+            float y = a*math.sin(transform.position.x + 1);
+            transform.position += new Vector3(moveSpeed * Time.deltaTime, y , 0);
+
+        }
+
+        if (transform.position.x >= target.position.x)
         {
             barManager.CustomerReady = true;
         }
@@ -27,9 +43,14 @@ public class costumer : MonoBehaviour
 
         if (Served)
         {
+            if (target != exitPoint)
+            {
+                OrderComplete(exitPoint);
+            }
+
             barManager.CustomerReady = false;
-            transform.position = Vector3.MoveTowards(transform.position, exitPoint.position, moveSpeed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, exitPoint.position) < 0.1f)
+            
+            if (Served && transform.position.x >= target.position.x)
             {
                 Destroy(gameObject);
             }
@@ -37,12 +58,18 @@ public class costumer : MonoBehaviour
 
         }
 
-        if (testbool)
-        {
-            Served = true;
-            testbool = false;
-        }
 
+    }
+
+    public void OrderComplete(Transform newTarget)
+    {
+        target = newTarget;
+       
+    }
+
+    public void ServedDrink()
+    {
+        Served = true;
     }
 
 

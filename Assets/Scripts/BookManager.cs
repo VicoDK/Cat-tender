@@ -4,8 +4,7 @@ using UnityEngine.UI;
 
 public class BookManager : MonoBehaviour
 {
-    //fix me 
-    ojbcvfxioubnhgs
+
 
 
 
@@ -53,6 +52,11 @@ public class BookManager : MonoBehaviour
 
 
         
+    }
+
+    public void Start()
+    {
+        Book.sprite = pages[currentPage];
     }
 
 
