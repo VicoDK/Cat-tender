@@ -5,7 +5,7 @@ using System.Collections;
 public class GrabObjectScript : MonoBehaviour
 {
      Collider2D col2D;
-     bool GettingDragged = false;
+     [HideInInspector] public bool GettingDragged = false;
     public void Start()
     {
 

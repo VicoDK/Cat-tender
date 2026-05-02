@@ -25,6 +25,14 @@ public class GlassManager : MonoBehaviour
             AddedToGlass();
              
         }
+
+        if (collision.gameObject.tag == "Fluid")
+        {
+            Debug.Log("Added Fluid");
+             
+        }
+
+        
         
     }
 
