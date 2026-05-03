@@ -80,4 +80,9 @@ public class ScoreSystem : MonoBehaviour
         ScoreText.text = Score.ToString();
 
     }
+
+    void Start()
+    {
+        _Time = StartTime;
+    }
 }

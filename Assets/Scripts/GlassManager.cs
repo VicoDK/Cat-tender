@@ -135,6 +135,7 @@ public class GlassManager : MonoBehaviour
     {
         public List<Liquids> liquids = new List<Liquids>();
         public bool Catnip;
+        public bool Ice;
         public string CocktilName;
 
     }
@@ -146,6 +147,12 @@ public class GlassManager : MonoBehaviour
         {
             if ((ingredientsInGlass.Contains("CatNip") && !_recipes.Catnip) ||
                 (!ingredientsInGlass.Contains("CatNip") && _recipes.Catnip))
+            {
+                continue;
+            }
+
+            if ((ingredientsInGlass.Contains("Ice") && !_recipes.Ice) ||
+                (!ingredientsInGlass.Contains("Ice") && _recipes.Ice))
             {
                 continue;
             }

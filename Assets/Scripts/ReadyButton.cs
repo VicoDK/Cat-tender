@@ -13,7 +13,7 @@ public class ReadyButton : MonoBehaviour
 
     public void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame &&!_Help.activeSelf )
+        if (Keyboard.current.spaceKey.wasPressedThisFrame &&!_Help.activeSelf )
         {
             escape();
             
