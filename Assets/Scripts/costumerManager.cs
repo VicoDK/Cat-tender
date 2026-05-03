@@ -39,6 +39,7 @@ public class costumerManager : MonoBehaviour
         {
             Destroy(cus);
         }
+        SpawnCostumer();
     }
 
 
