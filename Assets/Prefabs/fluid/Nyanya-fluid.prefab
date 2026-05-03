@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7679887007381832}
   - component: {fileID: -7489404038541050229}
   m_Layer: 0
-  m_Name: NyahNyah-fluid
+  m_Name: Nyanya-fluid
   m_TagString: Fluid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb50310498e8e8b479ed45530ba910fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  FluidType: NyahNyah
+  FluidType: Nyanya
 --- !u!58 &-7489404038541050229
 CircleCollider2D:
   m_ObjectHideFlags: 0
