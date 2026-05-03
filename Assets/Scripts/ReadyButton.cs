@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ReadyButton : MonoBehaviour
 {
@@ -45,6 +46,11 @@ public class ReadyButton : MonoBehaviour
     void Start()
     {
         Time.timeScale = 0f;
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

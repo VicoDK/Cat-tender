@@ -15,7 +15,10 @@ public class ScoreSystem : MonoBehaviour
 
     public void AddToScore()
     {
-        Score += ((TimeTaken-TimeFor0Score)/TimeFor0Score)*-100;
+        float ratio = TimeTaken / TimeFor0Score;
+        ratio = Mathf.Clamp01(ratio);
+
+        Score += 100f * (1f - ratio);
         TimeTaken = 0;
     }
 
