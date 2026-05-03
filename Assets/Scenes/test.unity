@@ -3808,7 +3808,7 @@ Transform:
   m_GameObject: {fileID: 511966848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.87, y: -2.49, z: 0}
+  m_LocalPosition: {x: -7.28, y: -2.49, z: 0}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0.22}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4852,7 +4852,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -87, y: 403}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 430.47, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &752471715
 CanvasRenderer:
@@ -4909,10 +4909,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
+  m_fontSize: 50
   m_fontSizeBase: 80
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -5378,7 +5378,7 @@ Transform:
   m_GameObject: {fileID: 908785442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.13, y: -0.26, z: 0}
+  m_LocalPosition: {x: 5.23, y: -0.26, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -6878,7 +6878,7 @@ Transform:
   m_GameObject: {fileID: 1180221915}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.97, y: -0.03, z: 0}
+  m_LocalPosition: {x: 7.02, y: -0.03, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8924,7 +8924,7 @@ Transform:
   m_GameObject: {fileID: 1537794478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.43, y: 0.06, z: 0}
+  m_LocalPosition: {x: 3.59, y: 0.06, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -12858,7 +12858,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -8
+  m_SortingOrder: -9
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3334738622998220081, guid: cf7bf49d3f4dbfb4e8773541792cba29, type: 3}
   m_Color: {r: 0.678539, g: 0.63897294, b: 0.7830189, a: 1}
@@ -13234,6 +13234,10 @@ PrefabInstance:
     - target: {fileID: 1177083238169083285, guid: 9334c8e926b756940b59e16583066987, type: 3}
       propertyPath: m_Name
       value: Hiss-Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177083238169083285, guid: 9334c8e926b756940b59e16583066987, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8681032041914750198, guid: 9334c8e926b756940b59e16583066987, type: 3}
       propertyPath: m_LocalPosition.x

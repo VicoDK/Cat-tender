@@ -304,7 +304,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: need umbrella
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f5ac81239fa9af24a945e91ebb11a777, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_margin: {x: 167.70343, y: 16.428864, z: 166.10117, w: 30.644684}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3087141777598087141
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_text: "\u201CI\u2019m feline thirsty, give me a drink\u201D\u201CI\u2019m feline
     thirsty, give me a drink\u201D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f5ac81239fa9af24a945e91ebb11a777, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -509,7 +509,7 @@ MonoBehaviour:
   m_margin: {x: 13.056862, y: 5.63958, z: 7.344055, w: 10.607178}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3379230477286954005
@@ -670,7 +670,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -9
+  m_SortingOrder: -8
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8288328391153087753, guid: af343714adb0ba642a606b3fdf6e6c04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
