@@ -8,7 +8,7 @@ public class BookManager : MonoBehaviour
 
 
 
-    public Sprite[] pages;
+    public GameObject[] pages;
     private int currentPage = 0;
 
     public bool isBookOpen = false;
@@ -18,7 +18,6 @@ public class BookManager : MonoBehaviour
 
     public float openCloseSpeed = 2f;
 
-    public Image Book;
     public Animator anim;
 
     public void BookOpenClose()
@@ -42,7 +41,7 @@ public class BookManager : MonoBehaviour
 
     public void PageChange(int direction)
     {
-        
+        pages[currentPage].SetActive(false);
         if (currentPage + direction < 0 || currentPage + direction >= pages.Length)
         {
             return;
@@ -52,7 +51,7 @@ public class BookManager : MonoBehaviour
 
         anim.SetTrigger("NextPage");
 
-         Book.sprite = pages[currentPage];
+         pages[currentPage].SetActive(true);
         
 
 
@@ -61,7 +60,7 @@ public class BookManager : MonoBehaviour
 
     public void Start()
     {
-        Book.sprite = pages[currentPage];
+        pages[currentPage].SetActive(true);
     }
 
   
