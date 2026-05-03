@@ -13,6 +13,18 @@ public class GlassManager : MonoBehaviour
 
     public List<string> ingredientsInGlass = new List<string>();
 
+    [System.Serializable] public class FluidAmounts 
+    {
+        public FluidAmounts(string _Fluid, float amount)
+        {
+            Fluid = _Fluid;
+            Amount = amount;
+        }
+        public string Fluid;
+        public float Amount;
+    }
+    public List<FluidAmounts> FluidList = new List<FluidAmounts>();
+
     public ingredientsListEffects[] ingredientsEffects;
 
     public string CockTailName;
@@ -44,12 +56,24 @@ public class GlassManager : MonoBehaviour
     public float FillProcent = 0;
     public GameObject fluid;
     public GameObject Fluidmass;
-    public void FillCup()
+    public void FillCup(string FluidType)
     {
         if (FillProcent < 100)
         {
             FillProcent += 0.5f;
-            
+
+    
+            int index = FluidList.FindIndex(f => f.Fluid == FluidType);
+            if (index != -1)
+            {
+                FluidList[index].Amount += 0.5f;
+            }
+            else
+            {
+                FluidList.Add(new FluidAmounts(FluidType, 0.5f));
+            }
+
+            CocktailType = CheckCocktail();
         }
         fluid.transform.localPosition = new Vector3(0, -3f + FillProcent * 0.05f, transform.position.z);
         Fluidmass.transform.localScale = new Vector3(2.208103f, FillProcent * 0.031f, 1);
@@ -65,7 +89,7 @@ public class GlassManager : MonoBehaviour
         
         fluid.transform.localPosition = new Vector3(0, -3f + FillProcent * 0.05f, transform.position.z);
         Fluidmass.transform.localScale = new Vector3(2.208103f, FillProcent * 0.01f, 1);
-        SpawnPoint = transform.position;
+       
     }
 
     private void RemoveAll()
@@ -93,6 +117,22 @@ public class GlassManager : MonoBehaviour
             }
         }
         
+    }
+
+
+
+    public string CocktailType;
+
+    [System.Serializable] public class Recip 
+    {
+        public string ingredientName;
+        public GameObject effect;
+    }
+
+
+    public string CheckCocktail()
+    {
+        return null;
     }
 
 

@@ -214,5 +214,5 @@ MonoBehaviour:
   GettingDragged: 0
   IgnorePourZone: 0
   PourPoint: {fileID: 2258605018280042035}
-  FluidPrefab: {fileID: 5279729996454406818, guid: 6451e552661e3d44a9e306cb9640d2ba, type: 3}
+  FluidPrefab: {fileID: 5279729996454406818, guid: 3fc935a7d8aa1304c8181e29fb508904, type: 3}
   pourSpeed: 1

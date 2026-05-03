@@ -19,6 +19,7 @@ public class BookManager : MonoBehaviour
     public float openCloseSpeed = 2f;
 
     public Image Book;
+    public Animator anim;
 
     public void BookOpenClose()
     {
@@ -48,7 +49,11 @@ public class BookManager : MonoBehaviour
         }
         currentPage += direction;
 
-        Book.sprite = pages[currentPage];
+
+        anim.SetTrigger("NextPage");
+
+         Book.sprite = pages[currentPage];
+        
 
 
         
@@ -58,6 +63,8 @@ public class BookManager : MonoBehaviour
     {
         Book.sprite = pages[currentPage];
     }
+
+  
 
 
 

@@ -8,22 +8,21 @@ public class costumerManager : MonoBehaviour
     public Transform barCenter;
     public Transform exitPoint;
     public BarManager barManager;
-    public bool testbool = false;
+
     public int custummerNumber;
     bool funded; 
 
     public void SpawnCostumer()
     {
-        funded = false;
-        while (!funded)
+        // Pick a random customer that's different from the last one
+        int number;
+        do
         {
-            int number = Random.Range(0, costumerPrefab.Length);
-            if (custummerNumber != number)
-            {
-                custummerNumber = number;
-                funded = true;
-            }
-        }
+            number = Random.Range(0, costumerPrefab.Length);
+        } while (number == custummerNumber && costumerPrefab.Length > 1);
+        
+        custummerNumber = number;
+        
         GameObject costumer = Instantiate(costumerPrefab[custummerNumber], spawnPoint.position, Quaternion.identity);
         costumer.GetComponent<costumer>().barCenter = barCenter;
         costumer.GetComponent<costumer>().exitPoint = exitPoint;
@@ -31,14 +30,7 @@ public class costumerManager : MonoBehaviour
 
     }
 
-    public void Update()
-    {
-        if (testbool)
-        {
-            SpawnCostumer();
-            testbool = false;
-        }
-    }
+
 
     
 

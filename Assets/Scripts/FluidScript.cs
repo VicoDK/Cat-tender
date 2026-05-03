@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FluidScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public string FluidType;
     void Start()
     {
         Invoke("DestroyFluid", 2f);
@@ -18,7 +18,7 @@ public class FluidScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Drink" && collision.gameObject.GetComponent<GlassManager>().FillProcent < 100)
         {
-            collision.gameObject.GetComponent<GlassManager>().FillCup();
+            collision.gameObject.GetComponent<GlassManager>().FillCup(FluidType);
             Destroy(gameObject);
         }
     }

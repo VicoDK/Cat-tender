@@ -49,7 +49,7 @@ public class ScoreSystem : MonoBehaviour
             DispayScore();
             TimerRunning = false;
             _Time = 0;
-            Timer.text = _Time.ToString();
+            Timer.text = FormatTime(_Time);
             return;
         }
         
@@ -60,7 +60,18 @@ public class ScoreSystem : MonoBehaviour
             TimeTaken += Time.deltaTime;
 
         }
-        Timer.text = _Time.ToString();
+        Timer.text = FormatTime(_Time);
+    }
+
+    private string FormatTime(float time)
+    {
+        int minutes = (int)(time / 60f);
+        int seconds = (int)(time % 60f);
+        
+        
+
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+ 
     }
 
     private void DispayScore()
