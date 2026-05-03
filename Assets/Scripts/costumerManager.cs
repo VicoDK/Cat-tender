@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -11,6 +12,7 @@ public class costumerManager : MonoBehaviour
 
     public int custummerNumber;
     bool funded; 
+    List<GameObject> custom = new List<GameObject>();
 
     public void SpawnCostumer()
     {
@@ -27,12 +29,21 @@ public class costumerManager : MonoBehaviour
         costumer.GetComponent<costumer>().barCenter = barCenter;
         costumer.GetComponent<costumer>().exitPoint = exitPoint;
         costumer.GetComponent<costumer>().barManager = barManager;
+        custom.Add(costumer);
 
+    }
+
+    public void Reset()
+    {
+        foreach(GameObject cus in custom)
+        {
+            Destroy(cus);
+        }
     }
 
 
 
-    
+
 
 
 

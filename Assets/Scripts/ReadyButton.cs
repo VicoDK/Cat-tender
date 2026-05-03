@@ -42,4 +42,9 @@ public class ReadyButton : MonoBehaviour
             }
     }
 
+    void Start()
+    {
+        Time.timeScale = 0f;
+    }
+
 }

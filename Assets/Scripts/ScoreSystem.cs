@@ -39,6 +39,7 @@ public class ScoreSystem : MonoBehaviour
     {
         _Time = StartTime;
         TimerRunning = true;
+        Time.timeScale = 1f;
     }
 
 
